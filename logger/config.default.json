@@ -1,0 +1,7 @@
+{
+    "logger.level" : "WARN",
+    "logger.appenders" : ["console"],    
+    "logger.appender.file.path" : "./",
+    "logger.appender.file.prefix" : "log_",
+    "logger.appender.file.extension" : ".txt"
+}

@@ -1,0 +1,9 @@
+{
+    "logger.level" : "WARN",
+    "logger.level.app.controller" : "DEBUG",
+    "logger.appenders" : ["console"],
+    "logger.appenders.test" : ["test"],    
+    "logger.appenders.test2" : ["file","test"],
+    "logger.level.test2" : "DEBUG",
+    "logger.appender.file.path" : "./logs/"
+}

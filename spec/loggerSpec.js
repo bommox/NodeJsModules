@@ -8,7 +8,7 @@ describe("Logger Spec", function() {
     Logger.registerAppeneder("test", (tag, level, msg) => {
       logs[level].push(msg);
     });
-
+    
   beforeEach(function() {
     logs = { DEBUG : [], INFO :[], WARN: [], ERROR: [] };
   });

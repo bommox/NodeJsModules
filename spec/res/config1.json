@@ -5,5 +5,6 @@
     "logger.appenders.test" : ["test"],    
     "logger.appenders.test2" : ["file","test"],
     "logger.level.test2" : "DEBUG",
-    "logger.appender.file.path" : "./logs/"
+    "logger.appender.file.path" : "./logs/",
+    "storage.dir" : "./logs/"
 }

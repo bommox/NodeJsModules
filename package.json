@@ -20,6 +20,7 @@
     "jasmine": "^2.5.2"
   },
   "dependencies": {
+    "cron": "^1.2.1",
     "lodash": "^4.17.4",
     "moment": "^2.17.1"
   }

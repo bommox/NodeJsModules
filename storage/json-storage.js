@@ -2,7 +2,8 @@ const fs = require('fs');
 
 const CONFIG = {
     STORAGE_DIR : "storage.dir",
-    STORAGE_JSON_FILENAME : "storage.json.filename"
+    STORAGE_JSON_FILENAME : "storage.json.filename",
+    STORAGE_AUTOSAVE : "storage.json.autosave"
 };
 
 module.exports = options => tag => {
@@ -13,6 +14,7 @@ module.exports = options => tag => {
     var filesufix = tag || "";
 
     const filename = config(CONFIG.STORAGE_DIR) + config(CONFIG.STORAGE_JSON_FILENAME) + "_"+ filesufix +".json"; 
+    const autosave = config(CONFIG.STORAGE_AUTOSAVE);
 
     var _data = undefined;
 
@@ -33,7 +35,9 @@ module.exports = options => tag => {
     return {
         put : (key, value) => {
             getJsonFile()[key] = value;
-            saveJsonFile();
+            if (autosave) {
+                saveJsonFile();
+            }
         },
         get : (key, defaultValue) => {
             var data = getJsonFile();
@@ -43,6 +47,7 @@ module.exports = options => tag => {
                 return defaultValue;
             }
         },
+        save : saveJsonFile,
         filename :  filename
     }
 }

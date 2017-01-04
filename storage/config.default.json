@@ -1,4 +1,5 @@
 {
     "storage.dir" : "./",
-    "storage.json.filename" : "storage-json"
+    "storage.json.filename" : "storage-json",
+    "storage.json.autosave" : false
 }
